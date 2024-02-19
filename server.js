@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://10.0.0.2:3000",
   })
 );
 app.use(bodyParser.json());
@@ -52,5 +52,5 @@ app.post("/submit", async (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://10.0.0.2:${PORT}`);
 });
